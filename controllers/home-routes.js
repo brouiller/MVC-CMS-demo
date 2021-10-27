@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
       include: [User],
     });
     const posts = allPosts.map((post) => post.get({ plain: true }));
-    res.render('all-posts', { posts });
+    res.render('homepage', { posts });
   } catch (err) {
     res.status(500).json(err);
   }
